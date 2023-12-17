@@ -117,47 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PasswordView" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PasswordView.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="basketAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="forGirls" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forGirls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="basketAdded" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketAdded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PasswordNotView" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PasswordNotView.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="forBoys" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forBoys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="basket" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basket.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\admin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="basketpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketpng.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RU5ErkJggg==
+</value>
   </data>
 </root>

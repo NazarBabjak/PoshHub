@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServicePoshHub" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IServicePoshHub_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8301/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8301/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8301/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicePoshHub_Connect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_Connect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_Disconnect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disconnect" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_Disconnect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_SelectionOfClothes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectionOfClothes" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_SelectionOfClothes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectionOfClothesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_Member_InputMessage">
+    <wsdl:part name="parameters" element="tns:Member" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_BlockUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:BlockUser" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_SelectionOfClothesCallBack_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SelectionOfClothesCallBack" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_SelectionOfClothesCallBack_InputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SelectionOfClothesCallBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicePoshHub_MemberCallBack_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:MemberCallBack" />
+  </wsdl:message>
+  <wsdl:portType name="IServicePoshHub">
+    <wsdl:operation name="Connect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePoshHub/Connect" message="tns:IServicePoshHub_Connect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePoshHub/ConnectResponse" message="tns:IServicePoshHub_Connect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePoshHub/Disconnect" message="tns:IServicePoshHub_Disconnect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePoshHub/DisconnectResponse" message="tns:IServicePoshHub_Disconnect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectionOfClothes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePoshHub/SelectionOfClothes" message="tns:IServicePoshHub_SelectionOfClothes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePoshHub/SelectionOfClothesResponse" message="tns:IServicePoshHub_SelectionOfClothes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Member">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePoshHub/Member" message="tns:IServicePoshHub_Member_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BlockUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePoshHub/BlockUser" message="tns:IServicePoshHub_BlockUser_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectionOfClothesCallBack">
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePoshHub/SelectionOfClothesCallBack" message="tns:IServicePoshHub_SelectionOfClothesCallBack_OutputCallbackMessage" />
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicePoshHub/SelectionOfClothesCallBackResponse" message="tns:IServicePoshHub_SelectionOfClothesCallBack_InputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MemberCallBack">
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicePoshHub/MemberCallBack" message="tns:IServicePoshHub_MemberCallBack_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IServicePoshHub" type="tns:IServicePoshHub">
+    <wsp:PolicyReference URI="#NetTcpBinding_IServicePoshHub_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Connect">
+      <soap12:operation soapAction="http://tempuri.org/IServicePoshHub/Connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap12:operation soapAction="http://tempuri.org/IServicePoshHub/Disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectionOfClothes">
+      <soap12:operation soapAction="http://tempuri.org/IServicePoshHub/SelectionOfClothes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Member">
+      <soap12:operation soapAction="http://tempuri.org/IServicePoshHub/Member" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="BlockUser">
+      <soap12:operation soapAction="http://tempuri.org/IServicePoshHub/BlockUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SelectionOfClothesCallBack">
+      <soap12:operation soapAction="http://tempuri.org/IServicePoshHub/SelectionOfClothesCallBack" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MemberCallBack">
+      <soap12:operation soapAction="http://tempuri.org/IServicePoshHub/MemberCallBack" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicePoshHub">
+    <wsdl:port name="NetTcpBinding_IServicePoshHub" binding="tns:NetTcpBinding_IServicePoshHub">
+      <soap12:address location="net.tcp://localhost:8302/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8302/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-26V5G8C\nazar</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

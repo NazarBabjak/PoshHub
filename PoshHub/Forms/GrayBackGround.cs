@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PoshHub
 {
-    public partial class Form_Authorization : Form
+    public partial class GrayBackGround : Form
     {
-        public Form_Authorization()
+        public GrayBackGround()
         {
             InitializeComponent();
         }
